@@ -8,8 +8,27 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="file" name="load" id="ifcInput" accept=".ifc" />
-    <div id="container" width="800" height="600"></div>
+    <div id="main-container">
+      <div id="container"></div>
+      <div id="buttons-container">
+        <!-- <button id="loadFragmentsButton">Load .frag</button> -->
+        <input
+          type="file"
+          name="load"
+          id="ifcInput"
+          accept=".ifc"
+          style="display: none"
+        />
+        <div id="file-name"></div>
+        <input
+          type="file"
+          id="fragInput"
+          accept=".frag"
+          multiple
+          style="display: none"
+        />
+      </div>
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>
