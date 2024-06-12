@@ -76,7 +76,7 @@ fragmentIfcLoader.settings.webIfc.COORDINATE_TO_ORIGIN = true;
 // }
 let uuid = "";
 async function loadIfc() {
-  const file = await fetch("./models/EJES-rEVIT.ifc");
+  const file = await fetch("./public/models/EJES-rEVIT.ifc");
   const data = await file.arrayBuffer();
   const buffer = new Uint8Array(data);
   const fragmentsGroup = await fragmentIfcLoader.load(buffer);
