@@ -1,4 +1,4 @@
-body, html {
+/* body, html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -20,10 +20,10 @@ body, html {
   height: 5%;
 }
 button {
-  /* flex: 1; */
+
   margin: 5px;
 }
 #file-name {
   text-align: center;
   margin-top: 5px;
-}
+} */
