@@ -40,7 +40,7 @@ const fragmentIfcLoader = components.get(OBC.IfcLoader);
 
 async function setupLoader() {
   await fragmentIfcLoader.setup({  wasm: {
-    path: "./web-ifc.wasm",
+    path: "./",
     absolute: true
   }});
 }

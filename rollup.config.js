@@ -3,13 +3,14 @@ import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import terser from "@rollup/plugin-terser";
 import serve from "rollup-plugin-serve";
+import copy from 'rollup-plugin-copy'
 
 export default {
   input: "app.ts",
   output: [
     {
       format: "esm",
-      file: "bundle.js",
+      file: "build/bundle.js",
     },
   ],
   plugins: [
@@ -23,6 +24,13 @@ export default {
       contentBase: ["", "public"], // Корневые директории для сервера
       host: "localhost",
       port: 3000, // Порт, на котором будет запущен сервер
+    }),
+    copy({
+      targets: [
+        { src: ['index.html', 'styles.css'], dest: 'build' },
+        { src: 'models', dest: 'build' },
+        { src: 'web-ifc.wasm', dest: 'build' },
+      ]
     }),
   ],
 };
