@@ -1,8 +1,8 @@
 services:
-  app:
+  app_open_3d:
     image: nginx
     ports:
-      - 3000:80
+      - 40022:80
     volumes:
       - ./public/:/usr/share/nginx/html/public
       - ./build/:/usr/share/nginx/html/
